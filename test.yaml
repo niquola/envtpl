@@ -1,0 +1,3 @@
+image: {{ DOCKER_IMAGE }}
+compose:
+  - word{{POSTFIX}}
