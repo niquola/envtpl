@@ -25,7 +25,15 @@ version: {{VERSION}}
 ```bash
 
 cat test.yaml | envtpl
+>> No VAR: IMAGE
+>> No VAR: VERSION
+>> image: <<NOVAR:IMAGE>>
+>> version: <<NOVAR:VERSION>>
+
 cat test.yaml | env IMAGE=myimg VERSION=v1 envtpl
+
+>> image: myimg
+>> version: v1
 ```
 
 
