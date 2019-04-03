@@ -34,6 +34,8 @@ cat test.yaml | env IMAGE=myimg VERSION=v1 envtpl
 
 ## Development
 
+Dev env
+
 ```
 curl https://sh.rustup.rs -sSf | sh\n
 echo 'export PATH="$HOME/.cargo/bin:$PATH"'  >> ~/.zshrc
@@ -43,19 +45,16 @@ cargo install rustfmt
 cargo install racer
 rustup component add rust-src
 cargo build
-cargo build --release
 cargo run
 
 ```
 
-
-
-
-Build for linux
+Build macos and linux
 
 ```
-docker pull clux/muslrust
-docker run -v $PWD:/volume --rm -t clux/muslrust cargo build
-ls target/
+bash build.sh
 
 ```
+
+
+Some hints from here https://lifthrasiir.github.io/rustlog/why-is-a-rust-executable-large.html
