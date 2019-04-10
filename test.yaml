@@ -1,3 +1,8 @@
-image: {{ DOCKER_IMAGE }}
-compose:
-  - word{{POSTFIX}}
+default:
+  image: __{{IMAGE || https://my.super.image }}__
+os:
+  home: {{HOME}}
+  editor: {{EDITOR}}
+  path: {{PATH}}
+  ts: "{{ #inst }}"
+  base64: "{{ HOME | base64 }}"
