@@ -1,8 +1,6 @@
-default:
-  image: __{{IMAGE || https://my.super.image }}__
-os:
-  home: {{HOME}}
-  editor: {{EDITOR}}
-  path: {{PATH}}
-  ts: "{{ #inst }}"
-  base64: "{{ HOME | base64 }}"
+home: {{ HOME }}
+image: "{{ IMAGE }}:{{ VERSION }}"
+extra:
+  with_default: "{{ VAR1 || this is default }}"
+  inst: "{{ #inst }}"
+  base64: "{{ VAR2 | base64 }}"
