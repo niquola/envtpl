@@ -1,6 +1,3 @@
-// use std::env;
-// use std::fs::File;
-
 extern crate chrono;
 extern crate base64;
 
@@ -111,7 +108,7 @@ fn main() {
             } else if state == 51 {
                 if c == '}' {
                     if w == "inst" {
-                        let now: DateTime<Local> = Local::now();
+                        let now: DateTime<Utc> = Utc::now();
                         res.push_str(&now.to_rfc3339());
                     } else {
                         eprintln!("No fn: {}", w);
