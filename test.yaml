@@ -1,5 +1,6 @@
 home: {{ HOME }}
 image: "{{ IMAGE }}:{{ VERSION }}"
+emptyDir: {}
 extra:
   with_default: "{{ VAR1 || this is default }}"
   inst: "{{ #inst }}"

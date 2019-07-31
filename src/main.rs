@@ -20,7 +20,6 @@ fn main() {
         let mut vr = String::from("");
         let mut w = String::from("");
         for c in line.unwrap().chars() {
-
             // normal state
             if state == 0 {
                 if c == '{' {
@@ -34,7 +33,8 @@ fn main() {
                     state = 2;
                 } else {
                     state = 0;
-                    res.push('{')
+                    res.push('{');
+                    res.push(c);
                 }
             // var name
             } else if state == 2 {
