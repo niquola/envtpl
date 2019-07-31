@@ -4,9 +4,9 @@
 
 ```
 # linux
-curl -L https://github.com/niquola/envtpl/releases/download/0.0.1/envtpl.linux > envtpl
+curl -L https://github.com/niquola/envtpl/releases/download/0.0.3/envtpl.linux > envtpl.linux
 # macos
-curl -L https://github.com/niquola/envtpl/releases/download/0.0.1/envtpl.macos > envtpl
+curl -L https://github.com/niquola/envtpl/releases/download/0.0.3/envtpl.macos > envtpl.macos
 
 chmod u+x envtpl
 ```
